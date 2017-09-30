@@ -1,0 +1,23 @@
+<%include partial/header %>
+<h1>请输入客户信息</h1>
+<form method='POST' action='users/add'>
+   <label>姓名:</label>
+   <input type='text' name='firstName' />
+   <br>
+   <label>邮箱：</label>
+   <input type='text' name='lastName' />
+   <br>
+   <input type='submit' value="填加" />
+
+</form>
+ 
+<ul>
+<%users.forEach(function(user){%>
+<li><%=user.firstName%> <%=user.lastName%></li>	
+<%   }) %>
+</ul>
+<%include partial/footer %>
+
+
+
+
